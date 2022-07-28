@@ -1,0 +1,113 @@
+.hero
+    background: linear-gradient(to right top, rgba(10, 46, 82, 0.88) 19.79%, rgba(0, 145, 110, 0.72) 100%), url("../images/src/hero-bg.png") center
+    padding: 100px 0 80px 0
+    .container
+        gap: 165px
+    .hero-left
+        padding-bottom: 48px
+        flex-direction: column
+    .main-logo-img
+        width: 100%
+        max-width: 260px
+    .lang-wrapper
+        border: 1px solid var(--white)
+        border-radius: 8px
+    .lang
+        padding: 12px 71px
+        cursor: pointer
+        transition: all 500ms ease-in-out
+        text-align: center
+        &:hover
+            background-color: var(--white)
+            color: var(--darkBlue)
+        &.arm
+            border-radius: 8px 0 0 8px
+        &.rus
+            border-radius: 0px 8px 8px 0
+    .hero-right
+        flex-direction: column
+        gap: 180px
+    .logo-img
+        width: 100%
+        max-width: 368px
+    .hero-p
+        margin: 16px 0
+
+
+@media screen and (max-width: 1440px)
+    .hero
+        .container
+            gap: 144px
+        .lang
+            padding: 12px 51px
+
+@media screen and (max-width: 1210px)
+    .hero
+        .container
+            gap: 125px
+        .lang
+            padding: 12px 31px
+        .hero-right
+            gap: 122px
+
+@media screen and (max-width: 1024px)
+    .hero
+        .container
+            gap: 32px
+        .lang
+            padding: 12px 38px
+        .logo-img
+            max-width: 345px
+
+@media screen and (max-width: 940px)
+    .hero
+        position: relative
+        padding: 48px 0 128px 0
+        .container
+            justify-content: space-between
+        .main-logo-img
+            max-width: 231px
+        .lang-wrapper
+            position: absolute
+            left: 50%
+            bottom: 50px
+            transform: translatex(-50%)
+            width: 94%
+        .lang
+            padding: 12px 53px
+            width: 100%
+        .logo-img
+            max-width: 316px
+        .hero-p-top
+            @include fontSize(24)
+        .hero-p
+            @include fontSize(80)
+        .hero-p-bottom
+            @include fontSize(16)
+
+@media screen and (max-width: 667px)
+    .hero
+        padding-bottom: 144px
+        .container
+            flex-direction: column
+            gap: 50px
+        .hero-right
+            gap: 84px
+        .lang-wrapper
+            bottom: 32px
+            width: 92%
+        .main-logo-img
+            max-width: 200px
+        .logo-img
+            max-width: 285px
+        .lang
+            @include fontSize(14)
+            padding: 12px
+        .hero-p
+            margin: 8px 0
+
+@media screen and (max-width: 340px)
+    .hero
+        .lang
+            @include fontSize(12)
+            padding: 12px 10px

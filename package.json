@@ -19,5 +19,9 @@
     "gulp-newer": "^1.4.0",
     "gulp-sass": "^4.1.0",
     "gulp-uglify-es": "^2.0.0"
+  },
+  "dependencies": {
+    "i": "^0.3.7",
+    "npm": "^8.15.1"
   }
 }
