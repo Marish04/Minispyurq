@@ -1,4 +1,69 @@
 .footer
-    padding: 48px 0
-    border-top: 1px solid var(--gray)
-    margin-top: 20px
+    .border
+        width: 95%
+        max-width: 1560px
+        margin: 0 auto
+        height: 1px
+    .container
+        // border-top: 1px solid var(--gray)
+        padding: 48px 0
+        gap: 30px
+    .logo-link-wrapper
+        flex-direction: column
+        gap: 8px
+    .logo-img
+        width: 100%
+        max-width: 304px
+    .link
+        margin-left: 77px
+    .icon-link:not(:last-child)
+        margin-right: 64px
+    .icon-img
+        width: 100%
+        max-width: 48px
+    .p-wrapper
+        text-align: right
+        max-width: 400px
+    .footer-p-top
+        margin-bottom: 16px
+
+@media screen and (max-width: 1440px)
+    .footer
+        .icon-link:not(:last-child)
+            margin-right: 44px
+
+@media screen and (max-width: 1280px)
+    .footer
+        .icon-link:not(:last-child)
+            margin-right: 24px
+
+@media screen and (max-width: 1024px)
+    .footer
+        .container
+            padding: 56px 24px
+        .p-wrapper
+            max-width: 270px
+        .icon-link:not(:last-child)
+            margin-right: 16px
+        
+@media screen and (max-width: 940px)
+    .footer
+        .container
+            flex-direction: column
+            align-items: start
+            gap: 46px
+        .icons-wrapper, .p-wrapper
+            margin-left: 77px
+        .p-wrapper
+            text-align: left
+            max-width: 500px
+        .footer-p
+            @include fontSize(12)
+
+@media screen and (max-width: 360px)
+    .footer
+        .container
+            gap: 36px
+            padding: 32px 16px
+        .icons-wrapper
+            display: none
