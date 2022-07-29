@@ -1,6 +1,8 @@
 .participation
-    padding: 80px
+    padding: 80px 0
     position: relative
+    .contact-wrapper-mobile
+        display: none
     .brand-img
         position: absolute
         right: 0
@@ -9,8 +11,6 @@
         max-width: 471px
     .container
         gap: 165px
-    .form, .content
-        max-width: 50%
     .form
         margin-top: -160px
         padding: 32px
@@ -20,6 +20,7 @@
         display: flex
         flex-direction: column
         gap: 24px
+        width: 50%
     .group
         gap: 24px
     .input-wrapper
@@ -173,3 +174,38 @@
         opacity: 1
         -webkit-transform: scale(1)
         transform: scale(1)
+
+
+@media screen and (max-width: 1440px)
+    .participation
+        .container
+            gap: 144px
+
+@media screen and (max-width: 1200px)
+    .participation
+        .container
+            gap: 125px
+
+@media screen and (max-width: 1024px)
+    .participation
+        .container
+            gap: 32px
+
+@media screen and (max-width: 940px)
+    .participation
+        padding: 48px 0
+        .container
+            flex-direction: column
+        .contact-wrapper-first
+            display: none
+        .contact-wrapper-mobile
+            display: block
+            order: 2
+        .form
+            order: 1
+            width: 100%
+            margin-top: 48px
+        .content
+            width: 100%
+        .content-p
+            max-width: 800px
