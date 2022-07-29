@@ -1,5 +1,12 @@
 .participation
     padding: 80px
+    position: relative
+    .brand-img
+        position: absolute
+        right: 0
+        top: 50%
+        transform: translateY(-50%)
+        max-width: 471px
     .container
         gap: 165px
     .form, .content
@@ -15,10 +22,6 @@
         gap: 24px
     .group
         gap: 24px
-    .firm-p
-        // margin: 24px 0 32px
-    .group2, .group3
-        // margin: 24px 0
     .input-wrapper
         position: relative
         width: 50%
@@ -55,6 +58,9 @@
         border-radius: 8px
         border: 1px solid var(--lightBlue100)
         background-color: var(--lightBlue200)
+        &:focus-visible
+            background-color: var(--lightBlue300)
+            outline: none
     .input.input-select
         width: 100%
     .textarea
