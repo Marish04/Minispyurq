@@ -5,7 +5,9 @@
   --darkBlue: #113C63;
   --lightBlue: #D0E7F0;
   --lightBlue100: rgba(20, 36, 51, 0.28);
+  --lightBlue200: rgba(20, 36, 51, 0.04);
   --gold: #FFD272;
   --blueGray: #648392;
   --gray: rgba(20, 36, 51, 0.52);
+  --lightGray: rgba(17, 60, 99, 0.08);
 }
