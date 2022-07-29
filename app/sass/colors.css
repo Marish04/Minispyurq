@@ -1,13 +1,14 @@
 :root {
   --white: #ffffff;
   --black: #142433;
-  --blue:  #008591;
-  --darkBlue: #113C63;
-  --lightBlue: #D0E7F0;
+  --blue: #008591;
+  --darkBlue: #113c63;
+  --lightBlue: #d0e7f0;
   --lightBlue100: rgba(20, 36, 51, 0.28);
   --lightBlue200: rgba(20, 36, 51, 0.04);
-  --gold: #FFD272;
+  --gold: #ffd272;
   --blueGray: #648392;
   --gray: rgba(20, 36, 51, 0.52);
+  --darkGray: rgba(20, 36, 51, 0.76);
   --lightGray: rgba(17, 60, 99, 0.08);
 }

@@ -10,22 +10,51 @@
         border-radius: 8px
         box-shadow: 0 12px var(--lightGray)
         width: 50%
+        display: flex
+        flex-direction: column
+        gap: 24px
+    .group
+        gap: 24px
     .firm-p
-        margin: 24px 0 32px
-    .input-wrapper2, .input-wrapper3
-        margin: 24px 0
+        // margin: 24px 0 32px
+    .group2, .group3
+        // margin: 24px 0
+    .input-wrapper
+        position: relative
+        width: 50%
+    .placeholder
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        left: 14px
+        font-weight: 300
+        font-size: 14px
+        transition: all 0.2s linear
+        color: var(--gray)
+    .input
+        height: 56px
+        &.focused
+            padding: 18px 12px 0px 12px
+            & ~ .placeholder
+                font-size: 12px
+                transform: translateY(-135%)
+                font-weight: 400
+                color: var(--darkGray)
+
+
+
     .textarea
-        margin: 24px 0 44px 0
-    .input-name, .input-country, .input-email
-        margin-right: 24px
+        margin: 0 0 20px 0
+        resize: none
+        min-height: 116px
     .input-select, .textarea, .btn
         display: block
     .input, .textarea
+        width: 100%
         padding: 18px 12px
         border-radius: 8px
         border: 1px solid var(--lightBlue100)
         background-color: var(--lightBlue200)
-        width: 50%
     .input.input-select
         width: 100%
     .textarea
@@ -55,29 +84,80 @@
         max-width: 48px
 
 
-
-
-    .radio-input
-        display: none
-        &[checked]~.radio-span::after
-            transform: translate(-50%, -50%) scale(1)
-    .radio-span
-        display: inline-block
-        width: 16px
-        height: 16px
-        border: 2px solid var(--darkBlue)
-        border-radius: 50%
-        position: relative
-        &::after
-            content: ""
-            width: 9px
-            height: 9px
-            background-color: var(--darkBlue)
-            display: inline-block
-            border-radius: 50%
-            position: absolute
-            top: 50%
-            left: 50%
-            transform: translate(-50%, -50%) scale(0)
+    .radio-input-wrapper
+        gap: 24px
+    .label-wrap 
+        width: 45%
+        flex-grow: 1
+    // .radio-input
+    //     display: none
+    //     &[checked]~.radio-span::after
+    //         transform: translate(-50%, -50%) scale(1)
+    // .radio-span
+    //     display: inline-block
+    //     width: 16px
+    //     height: 16px
+    //     border: 2px solid var(--darkBlue)
+    //     border-radius: 50%
+    //     position: relative
+    //     &::after
+    //         content: ""
+    //         width: 9px
+    //         height: 9px
+    //         background-color: var(--darkBlue)
+    //         display: inline-block
+    //         border-radius: 50%
+    //         position: absolute
+    //         top: 50%
+    //         left: 50%
+    //         transform: translate(-50%, -50%) scale(0)
 
     
+    input[type="radio"]:checked,
+    input[type="radio"]:not(:checked) 
+        position: absolute
+        left: -9999px
+
+    input[type="radio"]:checked + label,
+    input[type="radio"]:not(:checked) + label
+        position: relative
+        padding-left: 28px
+        cursor: pointer
+        line-height: 20px
+        display: inline-block
+        color: #666
+
+    input[type="radio"]:checked + label:before,
+    input[type="radio"]:not(:checked) + label:before 
+        content: ''
+        position: absolute
+        left: 0
+        top: 0
+        width: 18px
+        height: 18px
+        border: 1px solid var(--darkBlue)
+        border-radius: 100%
+        background: #fff
+
+    input[type="radio"]:checked + label:after,
+    input[type="radio"]:not(:checked) + label:after 
+        content: ''
+        width: 12px
+        height: 12px
+        background-color: var(--darkBlue)
+        position: absolute
+        top: 4px
+        left: 4px
+        border-radius: 100%
+        -webkit-transition: all 0.2s ease
+        transition: all 0.2s ease
+
+    input[type="radio"]:not(:checked) + label:after 
+        opacity: 0
+        -webkit-transform: scale(0)
+        transform: scale(0)
+
+    input[type="radio"]:checked + label:after 
+        opacity: 1
+        -webkit-transform: scale(1)
+        transform: scale(1)
