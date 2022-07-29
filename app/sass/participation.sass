@@ -75,6 +75,8 @@
         min-height: 116px
     .btn
         margin: 0 0 0 auto
+        &[disabled]
+            cursor: initial
     .content
         width: 50%
     .content-p
@@ -219,7 +221,8 @@
             border-bottom-right-radius: 8px
             padding-bottom: 8px
             
-@media screen and (max-width: 1440px)
+
+@media screen and (max-width: 1919px)
     .participation
         .container
             gap: 144px
@@ -228,6 +231,11 @@
     .participation
         .container
             gap: 125px
+
+@media screen and (max-width: 1439px)
+    .participation
+        .container
+            gap: 85px
 
 @media screen and (max-width: 1024px)
     .participation
@@ -244,11 +252,34 @@
         .contact-wrapper-mobile
             display: block
             order: 2
+            a 
+                @include fontSize(18)
+                word-break: break-word
         .form
             order: 1
             width: 100%
             margin-top: 48px
+        .brand-img
+            display: none
         .content
             width: 100%
         .content-p
             max-width: 800px
+
+@media screen and (max-width: 720px)
+    .participation
+        .group
+            flex-direction: column
+        .input-wrapper
+            width: 100%
+        .form
+            margin-top: 20px
+
+@media screen and (max-width: 520px)
+    .participation
+        .radio-input-wrapper
+            flex-direction: column
+        .label-wrap
+            width: 100%
+        .form
+            padding: 16px
