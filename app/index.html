@@ -95,37 +95,44 @@
           </div>
           <div class="radio-input-wrapper d-flex jc-sb">
             <div class="label-wrap">
-              <input type="radio" id="individual" name="individual" checked />
+              <input type="radio" id="individual" name="radio-group" />
               <label for="individual">Ես ներկայանում եմ որպես անհատ</label>
             </div>
             <div class="label-wrap">
-              <input type="radio" id="organization" name="organization" />
+              <input type="radio" id="organization" name="radio-group" />
               <label for="organization"
                 >Ես ներկայացնում եմ կազմակերպություն</label
               >
             </div>
           </div>
           <div class="group input-wrapper3 d-flex jc-sb">
-            <input
-              class="input input-email fz14 fw400 c-black"
-              type="email"
-              placeholder="էլ. հասցե"
-            />
-            <input
-              class="input fz14 fw400 c-black"
-              type="tel"
-              placeholder="Հեռախոսահամար"
-            />
+            <div class="input-wrapper">
+              <input
+                class="input input-email fz14 fw400 c-black"
+                type="email"
+              />
+              <div class="placeholder c-gray">էլ. հասցե</div>
+            </div>
+            <div class="input-wrapper">
+              <input class="input fz14 fw400 c-black" type="tel" />
+              <div class="placeholder c-gray">Հեռախոսահամար</div>
+            </div>
           </div>
-          <input
-            class="input input-select fz14 fw400 c-black"
-            type="select"
-            placeholder="Ձեր գործունեության ոլորտը"
-          />
-          <textarea
-            class="textarea fz14 fw400 c-black"
-            placeholder="Ինչ հարցեր կցանկանայիք քննարկել"
-          ></textarea>
+          <div class="group">
+            <div class="input-wrapper w-100">
+              <input
+                class="input input-select fz14 fw400 c-black"
+                type="select"
+              />
+              <div class="placeholder c-gray">Ձեր գործունեության ոլորտը</div>
+            </div>
+          </div>
+          <div class="input-wrapper w-100">
+            <textarea class="textarea fz14 fw400 c-black"></textarea>
+            <div class="placeholder c-gray">
+              Ինչ հարցեր կցանկանայիք քննարկել
+            </div>
+          </div>
           <button class="btn" type="submit" disabled>Հաստատել</button>
         </form>
         <div class="content">
