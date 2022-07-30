@@ -247,6 +247,7 @@
         padding: 48px 0
         .container
             flex-direction: column
+            gap: 0
         .contact-wrapper-first
             display: none
         .contact-wrapper-mobile
@@ -258,7 +259,11 @@
         .form
             order: 1
             width: 100%
-            margin-top: 48px
+            margin: 48px 0 60px 0
+        .form-title
+            @include fontSise(20)
+        .firm-p
+            @include fontSise(12)
         .brand-img
             display: none
         .content
