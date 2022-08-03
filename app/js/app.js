@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  $(".input-wrapper .input, .input-wrapper .textarea").keyup(function () {
+  $(".input-wrapper .input, .textarea").keyup(function () {
     if ($(this).val() !== "") {
       $(this).addClass("focused");
     } else {

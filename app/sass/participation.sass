@@ -8,6 +8,7 @@
         right: 0
         top: 50%
         transform: translateY(-50%)
+        width: 100%
         max-width: 471px
     .container
         gap: 165px
@@ -37,7 +38,8 @@
         font-size: 14px
         transition: all 0.2s linear
         color: var(--gray)
-    .input
+        pointer-events: none
+    .input, .textarea
         height: 56px
         &.focused
             padding: 18px 12px 0px 12px
@@ -47,14 +49,6 @@
                 font-weight: 400
                 color: var(--darkGray)
         
-
-
-
-    .textarea
-        margin: 0 0 20px 0
-        resize: none
-        min-height: 116px
-        font-family: inherit
     .input-select, .textarea, .btn
         display: block
     .input, .textarea
@@ -70,9 +64,16 @@
             border: 1px solid var(--red)
     .input.input-select
         width: 100%
-    .textarea
+    textarea.textarea
         width: 100%
         min-height: 116px
+        font: inherit
+        resize: none
+        padding: 24px 12px 0 12px !important
+        & ~ .placeholder
+            top: 6px
+        &.focused ~ .placeholder
+            top: 0
     .btn
         margin: 0 0 0 auto
         &[disabled]
@@ -92,8 +93,12 @@
         margin: 16px 0
     .icons-wrapper
         margin-top: 32px
-    .contact-link:not(:last-child)
-        margin-right: 16px
+    .contact-link
+        transition: all 0.2s linear
+        &:hover
+            opacity: 0.8
+        &:not(:last-child)
+            margin-right: 16px
     .contact-icon
         width: 100%
         max-width: 48px
@@ -128,15 +133,16 @@
         top: 0
         width: 18px
         height: 18px
-        border: 1px solid var(--darkBlue)
+        border: 2px solid var(--darkBlue)
         border-radius: 100%
         background: #fff
+        box-sizing: border-box
 
     input[type="radio"]:checked + label:after,
     input[type="radio"]:not(:checked) + label:after 
         content: ''
-        width: 12px
-        height: 12px
+        width: 10px
+        height: 10px
         background-color: var(--darkBlue)
         position: absolute
         top: 4px
@@ -261,9 +267,9 @@
             width: 100%
             margin: 48px 0 60px 0
         .form-title
-            @include fontSise(20)
+            @include fontSize(20)
         .firm-p
-            @include fontSise(12)
+            @include fontSize(12)
         .brand-img
             display: none
         .content
