@@ -47,7 +47,6 @@
                 font-size: 12px
                 transform: translateY(5px)
                 font-weight: 400
-                color: var(--darkGray)
         
     .input-select, .textarea, .btn
         display: block
@@ -177,6 +176,8 @@
     &.show
         .dropdown-items-ul
             display: block
+    &.error
+        border-color: var(--red)
     .arrow
         position: absolute
         top: 50%

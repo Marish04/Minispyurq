@@ -7,6 +7,14 @@ $(document).ready(function () {
     }
   });
 
+  // show hide new inputs
+  $(".company-label-wrap").click(function () {
+    $(".company-case-inputs").removeClass("hide");
+  });
+  $(".individual-label-wrap").click(function () {
+    $(".company-case-inputs").addClass("hide");
+  });
+
   // checkout modal dropdown
   function openDropdown() {
     window.$(".dropdown").addClass("show");
@@ -31,10 +39,10 @@ $(document).ready(function () {
     }
   });
 
-  // set active item
+  // set active item and add value for hidden select input
   window.$(".dropdown-item-li").click(function () {
     const currentValue = window.$(".active-item");
-    // currentValue.html(window.$(this).html());
+    $(".dropdown-value").attr("value", window.$(this).text().trim());
     currentValue.text(window.$(this).text());
   });
 });
