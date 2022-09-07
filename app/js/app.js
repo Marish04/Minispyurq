@@ -44,5 +44,13 @@ $(document).ready(function () {
     const currentValue = window.$(".active-item");
     $(".dropdown-value").attr("value", window.$(this).text().trim());
     currentValue.text(window.$(this).text());
+    currentValue.addClass("active-color");
+  });
+
+  $(".company-label-wrap").click(function () {
+    checkFields();
+  });
+  $(".individual-label-wrap").click(function () {
+    checkFields();
   });
 });
